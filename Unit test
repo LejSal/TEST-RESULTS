@@ -1,30 +1,16 @@
-import static org.junit.jupiter.api.Assertions.*;
-
-import java.util.ArrayList;
-import java.util.List;
-
 import org.junit.jupiter.api.Test;
 
-class CalculatorTest {
+import static org.junit.jupiter.api.Assertions.*;
 
-    @Test
-    void testCalculateAdditionAndMultiplication() {
-        // priprema podataka
-        List<Float> numbers = new ArrayList<>();
-        numbers.add(10f);
-        numbers.add(5f);
-        numbers.add(4f);
-        numbers.add(3f);
+public class CalculatorTest {
 
-        List<String> operations = new ArrayList<>();
-        operations.add("+");
-        operations.add("*");
-        operations.add("+");
-
-        // poziv metode
-        Calculator.Calculate(numbers, operations);
-
-        // očekujemo rezultat 10 + 5*4 + 3 = 10 + 20 + 3 = 33
-        assertEquals(33f, Calculator.finalResult, 0.001);
+        @Test
+        public void testAdditionAndMultiplication() {
+            // Izraz: 10 + 5 * 4 + 3
+            // Racunanje: 5*4 = 20, pa 10 + 20 + 3 = 33
+            String result = CalculatorApp.Calculator.Run("10+5*4+3");
+            assertEquals("33.0", result);
+        }
     }
-}
+
+
