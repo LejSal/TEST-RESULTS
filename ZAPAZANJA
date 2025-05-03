@@ -29,3 +29,10 @@ ________________________________________________________________________________
 2. Djeljenje sa nulom vraca `Infinity` umjesto prikaza greske korisniku.
 3. Unos nevalidnih karaktera (primjer: `a+5`) izaziva nejasnu grešku.
 4. Prazan unos izaziva nejasnu gresku.
+
+-JEDINICNI TEST:
+
+1. Testirana metoda `Calculate` za kombinaciju sabiranja i mnozenja.
+2. Test je uspesno prosao.
+3. Rezultat izraza `10+5*4+3` je ispravno iznosio `33.0`.
+
