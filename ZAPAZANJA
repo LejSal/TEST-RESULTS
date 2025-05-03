@@ -1,0 +1,31 @@
+- KREIRANJE TEST SLUCAJEVA ZA PROGRAM KALKULATOR:
+  1. program treba da izvrsava operacije:+,-,*,/ ;
+  2. program treba da pravilno izvrsava prioritet(mnozenje/deljenje prije sabiranja/oduzimanja);
+
+- ANALIZA STA TREBA TESTIRATI ( BLECK BOX - SISTEMSKO TESTIRANJE):
+  1. proveriti operacije:+,-,*,/
+  2. proveriti prioritet operatora( mnozenje/deljenje prije sabiranja/ oduzimanja)
+  3. proveriti negativne brojeve
+  4. proveriti deljenje sa nulom
+  5. proveriti prazan unos
+  6. proveriti nevalidan izraz (npr. a+5)
+
+- TEST PRIMERI I OCEKIVANI REZULTATI:
+
+Test slucaj                Unos                  Ocekivani rezultat                   Dobiveni rezultat
+_________________________________________________________________________________________________________
+    1                      3+2                         5                                     5
+    2                   10+4*2+1                      19                                     19
+    3                   10/2+3                         8                                     8
+    4                   -3+1                           2                                     2
+    5                    5*-2                        -10                                  ERROR
+    6                    4/0                    ERROR ILI INFINITY                       INFINITY
+    7                    4+                     NEDOVRSEN IZRAZ                           ERROR
+    8                    a+5                    ERROR:slovo umjesto broja                 ERROR
+________________________________________________________________________________________________________
+
+-UOCENI NEDOSTACI:
+1. Nepodrzano koriscenje negativnih brojeva nakon operatora (primjer: `5*-2`).
+2. Djeljenje sa nulom vraca `Infinity` umjesto prikaza greske korisniku.
+3. Unos nevalidnih karaktera (primjer: `a+5`) izaziva nejasnu grešku.
+4. Prazan unos izaziva nejasnu gresku.
